@@ -1,0 +1,68 @@
+.backgroundImage {
+  height: 900px;
+  background: url("../../../public/Assets/LoginPage/background-image.png"),
+    rgb(84, 93, 223) 50% / cover no-repeat;
+}
+
+.container {
+  width: 482px;
+  height: 900px;
+  padding: 0;
+}
+
+.logoLogin {
+  width: 100px;
+  height: 34px;
+  background: var(--primary-dark-blue-01, #cfd4ed);
+  margin-left: 55px;
+  margin-top: 274px;
+}
+
+.titleLogin {
+  color: #000;
+  font-family: Arial;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+
+  margin-left: 55px;
+  margin-top: 32px;
+}
+
+.formLogin {
+  margin-left: 55px;
+
+  color: #222;
+  font-family: Arial;
+}
+
+.formControl {
+  width: 370px;
+}
+
+.buttonLogin {
+  width: 370px;
+  padding: 8px 12px;
+
+  border-radius: 2px;
+  background: var(--primary-dark-blue-04, #0d28a6);
+}
+
+.loginFailedMessage {
+  width: 370px;
+  margin-left: 55px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding: 12px 16px;
+
+  border-radius: 5px;
+  background: rgba(208, 12, 26, 0.1);
+
+  color: #d00c1a;
+  font-family: Arial;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
+}

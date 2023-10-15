@@ -1,0 +1,54 @@
+.container {
+  margin-top: 56px;
+  margin-left: 320px;
+}
+
+.titleWrap{
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    margin-right: 24px;
+
+}
+
+:global(.btn-primary) {
+    border-radius: 2px;
+}
+
+.listCarTitle {
+  color: #000;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+
+  margin-bottom: 24px;
+}
+
+.listCarButton {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+:global(.btn-outline-primary) {
+  --bs-btn-color: #777d9b;
+  border-radius: 2px;
+}
+
+.cardWrap{
+    display: flex;
+    gap: 24px;
+}
+
+.cardButtonContainer{
+    display: flex;
+    gap: 16px;
+}
+
+.cardButton {
+    width: 143px;
+}

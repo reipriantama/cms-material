@@ -1,0 +1,15 @@
+.breadcrumbsTitle {
+  display: flex;
+  gap: 4px;
+
+  margin-top: 56px;
+  margin-left: 315px;
+  padding-top: 32px;
+
+  color: var(--neutral-01, #000);
+  font-family: Arial;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 150% */
+}

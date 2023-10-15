@@ -1,0 +1,28 @@
+/* .logo {
+    width: 100px;
+    height: 34px;
+    flex-shrink: 0;
+}
+.menuButton {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+} */
+
+.searchButton {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14;
+  color: #0d28a6;
+  border-color: #0d28a6;
+  line-height: 20px;
+}
+
+:global(.dropdown-menu) {
+  top: 125% !important;
+  left: -109px !important;
+}
+
+.hamburgerMenu {
+  margin-right: 560px;
+  float: inline-end;
+}

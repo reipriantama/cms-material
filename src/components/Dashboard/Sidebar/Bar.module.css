@@ -1,0 +1,14 @@
+.sideNav {
+  position: fixed;
+  background-color: darkblue;
+  height: 100vh;
+  width: 70px;
+  z-index: 1050;
+}
+
+.innerBackground {
+  width: 220px;
+  height: 500px;
+  margin-left: 200px;
+  background-color: white;
+}

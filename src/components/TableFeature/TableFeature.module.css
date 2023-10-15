@@ -1,0 +1,48 @@
+.tableContainer {
+  margin-top: 80px;
+  margin-left: 320px;
+  margin-bottom: 49px;
+  color: var(--neutral-01, #000);
+  font-family: Arial;
+  font-style: normal;
+}
+
+.tableDashboard {
+  margin-bottom: 26px;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px; /* 150% */
+}
+
+.tablesListOrder {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px; /* 142.857% */
+}
+
+.tablesIcon {
+  width: 4px;
+  height: 24px;
+  background: var(--primary-dark-blue-04, #0d28a6);
+}
+
+.react-bootstrap-table {
+  border-color: black !important;
+}
+
+thead {
+  background: #cfd4ed !important;
+}
+
+:global(.table) {
+  --bs-table-bg: none;
+}
+
+td {
+  --bs-table-bg-type: var(--bs-table-striped-bg);
+}

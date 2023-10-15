@@ -1,0 +1,16 @@
+.inner {
+    position: fixed;
+    left: 70px;
+    top: 57px;
+    height: 100vh;
+    width: 210px;
+    background-color: white;
+
+    @media (max-width: 768px) {
+    display: none;}
+}
+  
+.wrap {
+    position: absolute;
+    top: 54px;
+}

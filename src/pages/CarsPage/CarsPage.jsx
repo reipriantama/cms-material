@@ -1,10 +1,15 @@
 import React from "react";
 import CarList from "../../components/CarList/CarList";
+import { useLocation } from "react-router";
 
-const CarsPage = ({ searchResults }) => {
+const CarsPage = () => {
+  const {search} = useLocation()
+  
+  const searchParam = search.split('=')[1]
+
   return (
     <div>
-      <CarList cars={searchResults} />
+      <CarList search={searchParam}/>
     </div>
   );
 };

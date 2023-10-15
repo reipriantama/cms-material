@@ -33,7 +33,8 @@ const Header = () => {
     setName(event.target.value.toLowerCase());
   };
 
-  const handleSearch = async () => {
+  const handleSearch = async (e) => {
+    e.preventDefault()
     console.log("Searching for:", name);
     navigate({
       pathname: "/cars",
@@ -72,7 +73,7 @@ const Header = () => {
             />
           </div>
           <Nav>
-            <Form className="d-flex">
+            <Form className="d-flex" onSubmit={handleSearch}>
               <Form.Control
                 type="search"
                 placeholder="Search"

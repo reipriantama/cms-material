@@ -8,16 +8,17 @@ import api from "../../api";
 import moment from "moment";
 import { Modal } from "react-bootstrap";
 
-const CarList = () => {
+const CarList = ({search}) => {
   const [cars, setCars] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const [showDeleteModal, setShowDeleteModal] = useState(false); // State untuk menampilkan modal
   const [selectedCarToDelete, setSelectedCarToDelete] = useState(null); // State untuk mobil yang akan dihapus
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await api.getCars({});
+        const response = await api.getCars({name:search, category:selectedCategory});
+        console.log(response)
         if (response.status === 200) {
           const carsData = response.data.cars;
           setCars(carsData);
@@ -30,7 +31,7 @@ const CarList = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [search, selectedCategory]);
 
   const getCategoryLabel = (category) => {
     switch (category) {
@@ -58,16 +59,6 @@ const CarList = () => {
     return formatter.format(angka);
   }
 
-  const filterCarsByCategory = (category) => {
-    return cars.filter((car) => {
-      if (category === "All") {
-        return true;
-      } else {
-        return car.category === category;
-      }
-    });
-  };
-
   const handleShowDeleteModal = (car) => {
     setSelectedCarToDelete(car);
     setShowDeleteModal(true);
@@ -88,32 +79,32 @@ const CarList = () => {
       </div>
       <div className={styles.listCarButton}>
         <Button
-          variant="outline-primary"
-          onClick={() => setSelectedCategory("All")}
+          variant={!selectedCategory ? "primary" : 'outline-primary'}
+          onClick={() => {setSelectedCategory(null)}}
         >
           All
         </Button>
         <Button
-          variant="outline-primary"
-          onClick={() => setSelectedCategory("small")}
+          variant={selectedCategory === 'small' ? "primary" : 'outline-primary'}
+          onClick={() => {setSelectedCategory('small')}}
         >
           2-4 Orang
         </Button>
         <Button
-          variant="outline-primary"
-          onClick={() => setSelectedCategory("medium")}
+          variant={selectedCategory === 'medium' ? "primary" : 'outline-primary'}
+          onClick={() => {setSelectedCategory('medium')}}
         >
           4-6 Orang
         </Button>
         <Button
-          variant="outline-primary"
-          onClick={() => setSelectedCategory("large")}
+          variant={selectedCategory === 'large' ? "primary" : 'outline-primary'}
+          onClick={() => {setSelectedCategory('large')}}
         >
           6-8 Orang
         </Button>
       </div>
       <div className={`${styles.cardWrap} row`}>
-        {filterCarsByCategory(selectedCategory).map((car) => (
+        {cars.map((car) => (
           <Card
             key={car.id}
             style={{
